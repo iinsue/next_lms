@@ -138,7 +138,7 @@ export const ChaptersForm = ({ initialData, courseId }: ChaptersFormProps) => {
             >
               {!initialData.chapters.length && "No chapters"}
               <ChaptersList
-                onEdit={() => {}}
+                onEdit={onEdit}
                 onReorder={onReorder}
                 items={initialData.chapters || []}
               />
