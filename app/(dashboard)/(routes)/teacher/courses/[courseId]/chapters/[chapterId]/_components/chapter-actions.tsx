@@ -50,7 +50,7 @@ export const ChapterActions = ({
         {isPublished ? "Unpublish" : "Publish"}
       </Button>
       <ConfirmModal onConfirm={onDelete}>
-        <Button size="sm">
+        <Button size="sm" disabled={isLoading}>
           <Trash className="h-4 w-4" />
         </Button>
       </ConfirmModal>
