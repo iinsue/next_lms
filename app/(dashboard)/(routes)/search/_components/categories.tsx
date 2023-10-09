@@ -28,7 +28,7 @@ const iconMap: Record<Category["name"], IconType> = {
   Engineering: FcEngineering,
 };
 
-const Categories = ({ items }: CategoriesProps) => {
+export const Categories = ({ items }: CategoriesProps) => {
   return (
     <>
       <div className="flex items-center gap-x-2 overflow-x-auto pb-2">
@@ -44,5 +44,3 @@ const Categories = ({ items }: CategoriesProps) => {
     </>
   );
 };
-
-export default Categories;
