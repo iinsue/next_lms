@@ -1,4 +1,5 @@
 import { getChapter } from "@/actions/get-chapter";
+import { VideoPlayer } from "@/app/(dashboard)/(routes)/teacher/courses/[courseId]/chapters/[chapterId]/_components/video-player";
 import { Banner } from "@/components/banner";
 import { auth } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
@@ -47,15 +48,15 @@ const ChapterIdPage = async ({
         />
       )}
       <div className="flex flex-col max-w-4xl mx-auto pb-20">
-        {/* <VideoPlayer
+        <VideoPlayer
           chapterId={params.chapterId}
           title={chapter.title}
           courseId={params.courseId}
           nextChapterId={nextChapter?.id}
-          playbackId={muxData?.playbackId}
+          playbackId={muxData?.playbackId!}
           isLocked={isLocked}
           completeOnEnd={completeOnEnd}
-        /> */}
+        />
       </div>
     </>
   );
